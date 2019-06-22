@@ -4,13 +4,19 @@ var userInput = "";
 
 function validateSearch() {
   if (userInput == "") {
-    alert("please enter a city name");
+    modal("please enter a city name");
     // $('.modal').modal('methodName');
     return false;
   } else {
     return true;
   }
 };
+
+// 
+$(document).ready(function(){
+  $('.modal').modal();
+});
+
 
 //hide map and weather box before submit is clicked
 $("#weather-display").hide();
